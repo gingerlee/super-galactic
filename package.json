@@ -4,7 +4,7 @@
   "description": "#### **An age calculator based on solar years,** January 5, 2018",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start karma.conf.js"
   },
   "author": "Ginger Lee Kretschmer",
   "license": "ISC",

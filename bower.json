@@ -1,0 +1,17 @@
+{
+  "name": "super-galactic",
+  "description": "#### **An age calculator based on solar years,** January 5, 2018",
+  "main": "gulpfile.js",
+  "authors": [
+    "Ginger Lee Kretschmer"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
