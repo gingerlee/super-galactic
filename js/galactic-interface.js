@@ -1,3 +1,5 @@
+import { Age } from './../js/galactic-logic.js';
+
 $(document).ready(function() {
   $('.datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month
@@ -9,8 +11,9 @@ $(document).ready(function() {
   });
   $('form').submit(function(event) {
     event.preventDefault();
-    const enteredDOB = $('.datepicker').val();
-    console.log(enteredDOB);
+    // const enteredDOB = $('.datepicker').val();
+    const age = moment().diff(birthday, 'years');
+    console.log(age);
   });
 
 });
