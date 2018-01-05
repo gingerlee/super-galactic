@@ -13,8 +13,7 @@ $(document).ready(function() {
 
 
 
-    const seconds = moment().diff(newAgeSeconds, 'seconds',false);
-    alert( seconds);
+
 
   });
 });

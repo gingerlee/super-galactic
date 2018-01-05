@@ -6,11 +6,16 @@ export class Age {
   }
 
   AgeInSeconds(){
-    let days = this.age * 365.25;
-    let hours = days * 24;
-    let minutes = hours * 60;
-    let seconds = minutes * 60;
-    return seconds;
+    let ageDays = this.age * 365.25;
+    let ageHours = ageDays * 24;
+    let ageMinutes = ageHours * 60;
+    let ageSeconds = ageMinutes * 60;
+    return ageSeconds;
+  }
+
+  AccurateAgeInSeconds(){
+    const seconds = moment().diff(ageSeconds, 'seconds',false);
+    alert(seconds);
   }
 
   MercuryAge(){
@@ -33,7 +38,7 @@ export class Age {
 
 class LifeExpectancy extends Age {
   constructor(enteredAge) {
-  const averageLife = 71;
-
+    this.averageLife = 71;
   }
+
 };
