@@ -1,13 +1,13 @@
-var gulp = require('gulp');
-var browserify = require('browserify');
-var source = require('vinyl-source-stream');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var utilities = require('gulp-util');
-var del = require('del');
-var jshint = require('gulp-jshint');
-var buildProduction = utilities.env.production;
-var lib = require('bower-files')({
+const gulp = require('gulp');
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const utilities = require('gulp-util');
+const del = require('del');
+const jshint = require('gulp-jshint');
+const buildProduction = utilities.env.production;
+const lib = require('bower-files')({
   "overrides":{
     "materialize" : {
       "main": [
@@ -19,11 +19,18 @@ var lib = require('bower-files')({
   }
 });
 
-var browserSync = require('browser-sync').create();
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var babelify = require('babelify');
-var moment = require('moment');
+const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const babelify = require('babelify');
+const moment = require('moment');
+const imageMin = require('gulp-imagemin');
+
+gulp.task('jshint', function(){
+  return gulp.src(['js/*.js'])
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
+});
 
 gulp.task('concatInterface', function() {
   return gulp.src(['./js/*-interface.js'])
@@ -61,6 +68,12 @@ gulp.task('bowerCSS', function () {
 });
 
 gulp.task('bower', ['bowerJS', 'bowerCSS']);
+
+gulp.task('default', () =>
+    gulp.src('tmp/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./build/img'))
+);
 
 gulp.task("clean", function(){
   return del(['build', 'tmp']);
