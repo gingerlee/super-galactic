@@ -24,6 +24,12 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var babelify = require('babelify');
 
+gulp.task('concatInterface', function() {
+  return gulp.src(['./js/*-interface.js'])
+  .pipe(concat('allConcat.js'))
+  .pipe(gulp.dest('./tmp'));
+});
+
 gulp.task('jsBrowserify', ['concatInterface'], function() {
   return browserify({ entries: ['./tmp/allConcat.js'] })
     .transform(babelify.configure({
