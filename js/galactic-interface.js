@@ -1,4 +1,4 @@
-import { Age } from './../js/galactic-logic.js';
+import { Age, LifeExpectancy } from './../js/galactic-logic.js';
 
 $(document).ready(function() {
   $('#age-form').submit(function(event) {
@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 
 
-    const seconds = moment().diff('1983-09-07', 'seconds',false);
+    const seconds = moment().diff(newAgeSeconds, 'seconds',false);
     alert( seconds);
 
   });

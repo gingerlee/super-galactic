@@ -6,23 +6,34 @@ export class Age {
   }
 
   AgeInSeconds(){
-    let days = (this.age * 365.25);
+    let days = this.age * 365.25;
     let hours = days * 24;
     let minutes = hours * 60;
     let seconds = minutes * 60;
     return seconds;
   }
 
-  class MercuryAge extends Age {
-    return enteredAge / .24;
+  MercuryAge(){
+  return enteredAge / .24;
   }
-  class VenusAge extends Age {
-    return enteredAge / .62;
+
+  VenusAge(){
+  return enteredAge / .62;
   }
-  class MarsAge extends Age {
-    return enteredAge / 1.88;
+
+  MarsAge() {
+  return enteredAge / 1.88;
   }
-  class JupiterAge extends Age {
-    return enteredAge / 11.86;
+
+  JupiterAge() {
+  return enteredAge / 11.86;
+  }
+
+};
+
+class LifeExpectancy extends Age {
+  constructor(enteredAge) {
+  const averageLife = 71;
+
   }
 };
