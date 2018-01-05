@@ -13,4 +13,16 @@ export class Age {
     return seconds;
   }
 
+  class MercuryAge extends Age {
+    return enteredAge / .24;
+  }
+  class VenusAge extends Age {
+    return enteredAge / .62;
+  }
+  class MarsAge extends Age {
+    return enteredAge / 1.88;
+  }
+  class JupiterAge extends Age {
+    return enteredAge / 11.86;
+  }
 };

@@ -1,7 +1,7 @@
 import { Age } from './../js/galactic-logic.js';
 
 describe ("Age", function() {
-  var testAge;
+  const testAge;
 
   beforeEach(function(){
     testAge = new Age(34);
