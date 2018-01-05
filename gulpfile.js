@@ -87,4 +87,25 @@ gulp.task('serve', ['build'], function() {
   gulp.watch(['bower.json'], ['bowerBuild']);
   gulp.watch(['*.html'], ['htmlBuild']);
   gulp.watch('scss/*.scss', ['cssBuild']);
-  });
+});
+
+gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function(){
+  browserSync.reload();
+});
+
+gulp.task('bowerBuild', ['bower'], function(){
+  browserSync.reload();
+});
+
+gulp.task('htmlBuild', ['bower'], function(){
+  browserSync.reload();
+});
+
+gulp.task('cssBuild', ['bower'], function(){
+  return gulp.src('scss/*.scss')
+  .pipe(sourcemaps.init())
+  .pipe(sass())
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest('./build/css'))
+  .pipe(browserSync.stream());
+});
