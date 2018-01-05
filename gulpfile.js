@@ -82,3 +82,9 @@ gulp.task('serve', ['build'], function() {
       index: "index.html"
     }
   });
+
+  gulp.watch(['js/*.js'], ['jsBuild']);
+  gulp.watch(['bower.json'], ['bowerBuild']);
+  gulp.watch(['*.html'], ['htmlBuild']);
+  gulp.watch('scss/*.scss', ['cssBuild']);
+  });
