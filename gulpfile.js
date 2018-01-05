@@ -74,3 +74,11 @@ gulp.task('build', ['clean'], function(){
   gulp.start('bower');
   gulp.start('cssBuild');
 });
+
+gulp.task('serve', ['build'], function() {
+  browserSync.init({
+    server: {
+      baseDir: "./",
+      index: "index.html"
+    }
+  });
