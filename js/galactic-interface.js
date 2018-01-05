@@ -1,19 +1,16 @@
-import { Age } from './../js/galactic-logic.js';
+// import { Age } from './../js/galactic-logic.js';
 
 $(document).ready(function() {
-  $('.datepicker').pickadate({
-    selectMonths: true, // Creates a dropdown to control month
-    selectYears: 50, // Creates a dropdown of 50 years to control year,
-    today: 'Today',
-    clear: 'Clear',
-    close: 'Ok',
-    closeOnSelect: false // Close upon selecting a date,
-  });
-  $('form').submit(function(event) {
+  $('#age-form').submit(function(event) {
     event.preventDefault();
-    // const enteredDOB = $('.datepicker').val();
-    const age = moment().diff(birthday, 'years');
-    console.log(age);
+    const enteredAge = parseInt($('#age').val());
+    console.log(enteredAge);
+    // $('#age-form').slideUp();
+    // $('.results').slideDown();
+    $('.resluts').append(
+    `<li>
+    <p>Your age is: ${enteredAge}</p>
+    </li>`
+    );
   });
-
 });

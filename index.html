@@ -14,10 +14,12 @@
     <section>
       <div class="container">
         <h1 class="flow-text">Super Galactic Age Calculator</h1>
-        <form class="birthdate" action="index.html" method="post">
-          <input placeholder="Birthdate" type="text" class="datepicker">
-          <button class="btn btn large teal" type="submit" name="button">Calculate</button>
+        <form class="birthdate" action="index.html" method="post" id="age-form">
+          <input placeholder="Age" type="text" class="validate" id="age">
+          <button class="btn btn-large teal" type="submit" name="button">Calculate</button>
         </form>
+        <ul class="results">
+        </ul>
       </div>
   </section>
   </body>
