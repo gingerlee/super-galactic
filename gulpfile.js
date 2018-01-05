@@ -23,6 +23,7 @@ var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var babelify = require('babelify');
+var moment = require('moment');
 
 gulp.task('concatInterface', function() {
   return gulp.src(['./js/*-interface.js'])
