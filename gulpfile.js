@@ -45,3 +45,10 @@ gulp.task('minifyScripts', ['jsBrowserify'], function(){
     .pipe(uglify())
     .pipe(gulp.dest('./build/js'));
 });
+
+gulp.task('bowerJS', function () {
+  return gulp.src(lib.ext('js').files)
+    .pipe(concat('vendor.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./build/js'));
+});
