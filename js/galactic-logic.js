@@ -14,12 +14,15 @@ export class Age {
   }
 
   AccurateAgeInSeconds(){
-    const seconds = moment().diff(ageSeconds, 'seconds',false);
-    alert(seconds);
+    let now = moment().unix();
+    let then = date.unix();
+    let diff = (now - then) / (60 * 60 * 24 * 365);
+    let years = Math.floor(diff);
   }
 
   MercuryAge(){
-  return enteredAge / .24;
+    const mercAge = enteredAge / .24
+    return mercAge;
   }
 
   VenusAge(){
