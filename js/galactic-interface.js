@@ -7,6 +7,10 @@ $(document).ready(function() {
     close: 'Ok',
     closeOnSelect: false // Close upon selecting a date,
   });
-  
+  $('form').submit(function(event) {
+    event.preventDefault();
+    const enteredDOB = $('.datepicker').val();
+    console.log(enteredDOB);
+  });
 
 });
