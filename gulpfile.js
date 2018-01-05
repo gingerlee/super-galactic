@@ -64,3 +64,13 @@ gulp.task('bower', ['bowerJS', 'bowerCSS']);
 gulp.task("clean", function(){
   return del(['build', 'tmp']);
 });
+
+gulp.task('build', ['clean'], function(){
+  if (buildProduction) {
+    gulp.start('minifyScripts');
+  } else {
+    gulp.start('jsBrowserify');
+  }
+  gulp.start('bower');
+  gulp.start('cssBuild');
+});
