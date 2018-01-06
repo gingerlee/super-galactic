@@ -20,28 +20,32 @@ export class Age {
     let years = Math.floor(diff);
   }
 
-  MercuryAge(){
-    const mercAge = enteredAge / .24
-    return mercAge;
+  Mercury(){
+    const mercuryAge = enteredAge / .24
+    return mercuryAge;
   }
 
-  VenusAge(){
-  return enteredAge / .62;
+  Venus(){
+    const venusAge = enteredAge / .62;
+    return venusAge;
   }
 
-  MarsAge() {
-  return enteredAge / 1.88;
+  Mars() {
+    const marsAge = enteredAge / 1.88;
+    return marsAge
   }
 
-  JupiterAge() {
-  return enteredAge / 11.86;
+  Jupiter() {
+    const jupiterAge = enteredAge / 11.86;
+    return jupiterAge;
   }
 
-};
-
-class LifeExpectancy extends Age {
-  constructor(enteredAge) {
-    this.averageLife = 71;
+  LifeExpectancy(){
+    const averageLife = 71; //US average
+    const smoker; //takes 13 years off life
+    const male; //takes 8 years off life
+    const runner; //adds 5 years to life
+    const lefty; //takes 3 years off life
+    if
   }
-
 };

@@ -8,7 +8,7 @@ $(document).ready(function() {
     const newAgeSeconds = new Age(enteredAge);
     console.log(newAgeSeconds);
     $('#age-form').slideUp();
-    $('.resluts').append(`<li> Your age in years is: ${enteredAge} </li>`);
+    $('.resluts').append('<li> Your age in years is:' + enteredAge + `</li>`);
     $('.resluts').slideDown();
 
 
