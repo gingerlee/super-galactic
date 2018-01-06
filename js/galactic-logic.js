@@ -6,19 +6,19 @@ export class Age {
   }
 
   AgeInSeconds(){
-    let ageDays = this.age * 365.25;
+    let ageDays = enteredAge * 365.25;
     let ageHours = ageDays * 24;
     let ageMinutes = ageHours * 60;
     let ageSeconds = ageMinutes * 60;
     return ageSeconds;
   }
 
-  AccurateAgeInSeconds(){
-    let now = moment().unix();
-    let then = date.unix();
-    let diff = (now - then) / (60 * 60 * 24 * 365);
-    let years = Math.floor(diff);
-  }
+  // AccurateAgeInSeconds(){
+  //   let now = moment().unix();
+  //   let then = date.unix();
+  //   let diff = (now - then) / (60 * 60 * 24 * 365);
+  //   let years = Math.floor(diff);
+  // }
 
   Mercury(){
     const mercuryAge = enteredAge / .24
@@ -40,12 +40,13 @@ export class Age {
     return jupiterAge;
   }
 
-  LifeExpectancy(){
-    const averageLife = 71; //US average
-    const smoker; //takes 13 years off life
-    const male; //takes 8 years off life
-    const runner; //adds 5 years to life
-    const lefty; //takes 3 years off life
-    if
-  }
+  // LifeExpectancy(){
+  //   const averageLife = 71; //US average
+  //   const smoker; //takes 13 years off life
+  //   const male; //takes 8 years off life
+  //   const runner; //adds 5 years to life
+  //   const lefty; //takes 3 years off life
+  //
+  //   if
+  // }
 };
