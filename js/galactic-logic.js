@@ -1,5 +1,5 @@
 
-// // User Age Calcualtion
+ // User Age Calcualtion
 export class Age {
   constructor(enteredAge) {
     this.age = enteredAge;
@@ -40,13 +40,12 @@ export class Age {
     return jupiterAge;
   }
 
-  // LifeExpectancy(){
+  // LifeExpectancy(gender, smoker, runner, lefty){
   //   const averageLife = 71; //US average
-  //   const smoker; //takes 13 years off life
-  //   const male; //takes 8 years off life
-  //   const runner; //adds 5 years to life
-  //   const lefty; //takes 3 years off life
-  //
+  //   smoker - takes 13 years off life
+  //   male - takes 8 years off life
+  //   runner - adds 5 years to life
+  //   lefty - takes 3 years off life
   //   if
   // }
 };

@@ -6,7 +6,7 @@
     "Ginger Lee Kretschmer"
   ],
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/gingerlee/super-galactic",
   "ignore": [
     "**/.*",
     "node_modules",
