@@ -1,4 +1,4 @@
-import { Age, LifeExpectancy } from './../js/galactic-logic.js';
+import { Age } from './../js/galactic-logic.js';
 
 describe ("Age", function() {
   const testAge;

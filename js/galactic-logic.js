@@ -1,51 +1,121 @@
 
  // User Age Calcualtion
 export class Age {
-  constructor(enteredAge) {
-    this.age = enteredAge;
+  constructor(dob) {
+    this.dob = dob;
   }
 
-  AgeInSeconds(){
-    let ageDays = enteredAge * 365.25;
-    let ageHours = ageDays * 24;
-    let ageMinutes = ageHours * 60;
-    let ageSeconds = ageMinutes * 60;
-    return ageSeconds;
+  ageInYears() {
+    let dob = this.dob;
+    let ageInYears = moment().diff(dob, 'years');
+    return ageInYears;
   }
 
-  // AccurateAgeInSeconds(){
-  //   let now = moment().unix();
-  //   let then = date.unix();
-  //   let diff = (now - then) / (60 * 60 * 24 * 365);
-  //   let years = Math.floor(diff);
-  // }
+  ageInSeconds(){
+    let ageInSeconds = this.ageInYears() * 31536000;
+    return ageInSeconds;
+  }
 
-  Mercury(){
-    const mercuryAge = enteredAge / .24
+  mercury(){
+    let mercuryAge = Math.round(this.ageInYears() * 0.24);
     return mercuryAge;
   }
 
-  Venus(){
-    const venusAge = enteredAge / .62;
+  venus(){
+    let venusAge = Math.round(this.ageInYears() * 0.62);
     return venusAge;
   }
 
-  Mars() {
-    const marsAge = enteredAge / 1.88;
-    return marsAge
+  mars() {
+    let marsAge = Math.round(this.ageInYears() * 1.88);
+    return marsAge;
   }
 
-  Jupiter() {
-    const jupiterAge = enteredAge / 11.86;
+  jupiter() {
+    let jupiterAge = Math.round(this.ageInYears() * 11.86);
     return jupiterAge;
   }
 
-  // LifeExpectancy(gender, smoker, runner, lefty){
-  //   const averageLife = 71; //US average
-  //   smoker - takes 13 years off life
-  //   male - takes 8 years off life
-  //   runner - adds 5 years to life
-  //   lefty - takes 3 years off life
-  //   if
-  // }
-};
+  //Life Expectancy Notes:
+  // US average = 71
+  // male - takes 5 years off life
+  // smoker - takes 13 years off life
+  // runner - adds 5 years to life
+  // lefty - takes 3 years off life
+
+  lifeExpectancyEarth(gender, smoker, runner, lefty) {
+    let averageLife = 71;
+    if (gender === 'male') {
+      averageLife -= 5;
+    }
+    if (smoker === 'yes') {
+      averageLife -= 13;
+    }
+    if (runner === 'yes') {
+      averageLife += 5;
+    }
+    if (lefty === 'yes') {
+      averageLife -= 3;
+    }
+    return averageLife;
+  }
+
+  lifeExpectancyMercury(gender, smoker, runner, lefty) {
+    let earthLife = this.lifeExpectancyEarth(gender, smoker, runner, lefty);
+    let mercuryLife = Math.round(earthLife / 0.24);
+    return mercuryLife;
+  }
+
+  lifeExpectancyVenus(gender, smoker, runner, lefty) {
+    let earthLife = this.lifeExpectancyEarth(gender, smoker, runner, lefty);
+    let venusLife = Math.round(earthLife / 0.62);
+    return venusLife;
+  }
+
+  lifeExpectancyMars(gender, smoker, runner, lefty) {
+    let earthLife = this.lifeExpectancyEarth(gender, smoker, runner, lefty);
+    let marsLife = Math.round(earthLife / 1.88);
+    return marsLife;
+  }
+
+  lifeExpectancyJupiter(gender, smoker, runner, lefty) {
+    let earthLife = this.lifeExpectancyEarth(gender, smoker, runner, lefty);
+    let jupiterLife = Math.round(earthLife / 11.86);
+    return jupiterLife;
+  }
+
+  earthYearsLeft(gender, smoker, runner, lefty) {
+    let earthLife = this.lifeExpectancyEarth(gender, smoker, runner, lefty);
+    let age = this.ageInYears();
+    let yearsLeft = earthLife - age;
+    return yearsLeft;
+  }
+
+  mercuryYearsLeft(gender, smoker, runner, lefty) {
+    let earthLife = this.lifeExpectancyMercury(gender, smoker, runner, lefty);
+    let age = this.ageInYears();
+    let yearsLeft = earthLife - age;
+    return yearsLeft;
+  }
+
+  venusYearsLeft(gender, smoker, runner, lefty) {
+    let earthLife = this.lifeExpectancyVenus(gender, smoker, runner, lefty);
+    let age = this.ageInYears();
+    let yearsLeft = earthLife - age;
+    return yearsLeft;
+  }
+
+  marsYearsLeft(gender, smoker, runner, lefty) {
+    let earthLife = this.lifeExpectancyMars(gender, smoker, runner, lefty);
+    let age = this.ageInYears();
+    let yearsLeft = earthLife - age;
+    return yearsLeft;
+  }
+
+  jupiterYearsLeft(gender, smoker, runner, lefty) {
+    let earthLife = this.lifeExpectancyJupiter(gender, smoker, runner, lefty);
+    let age = this.ageInYears();
+    let yearsLeft = earthLife - age;
+    return yearsLeft;
+  }
+}
