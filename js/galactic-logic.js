@@ -92,30 +92,30 @@ export class Age {
   }
 
   mercuryYearsLeft(gender, smoker, runner, lefty) {
-    let earthLife = this.lifeExpectancyMercury(gender, smoker, runner, lefty);
+    let mercuryLife = this.lifeExpectancyMercury(gender, smoker, runner, lefty);
     let age = this.ageInYears();
-    let yearsLeft = earthLife - age;
+    let yearsLeft = mercuryLife - age;
     return yearsLeft;
   }
 
   venusYearsLeft(gender, smoker, runner, lefty) {
-    let earthLife = this.lifeExpectancyVenus(gender, smoker, runner, lefty);
+    let venusLife = this.lifeExpectancyVenus(gender, smoker, runner, lefty);
     let age = this.ageInYears();
-    let yearsLeft = earthLife - age;
+    let yearsLeft = venusLife - age;
     return yearsLeft;
   }
 
   marsYearsLeft(gender, smoker, runner, lefty) {
-    let earthLife = this.lifeExpectancyMars(gender, smoker, runner, lefty);
+    let marsLife = this.lifeExpectancyMars(gender, smoker, runner, lefty);
     let age = this.ageInYears();
-    let yearsLeft = earthLife - age;
+    let yearsLeft = marsLife - age;
     return yearsLeft;
   }
 
   jupiterYearsLeft(gender, smoker, runner, lefty) {
-    let earthLife = this.lifeExpectancyJupiter(gender, smoker, runner, lefty);
+    let jupiterLife = this.lifeExpectancyJupiter(gender, smoker, runner, lefty);
     let age = this.ageInYears();
-    let yearsLeft = earthLife - age;
+    let yearsLeft = jupiterLife - age;
     return yearsLeft;
   }
 }
