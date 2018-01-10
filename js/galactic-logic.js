@@ -36,12 +36,12 @@ export class Age {
     return jupiterAge;
   }
 
-  //Life Expectancy Notes:
-  // US average = 71
-  // male - takes 5 years off life
-  // smoker - takes 13 years off life
-  // runner - adds 5 years to life
-  // lefty - takes 3 years off life
+  //Life Expectancy Notes//
+  // US average age = 71
+  // male --> takes 5 years off life
+  // smoker --> takes 13 years off life
+  // runner --> adds 5 years to life
+  // lefty --> takes 3 years off life
 
   lifeExpectancyEarth(gender, smoker, runner, lefty) {
     let averageLife = 71;

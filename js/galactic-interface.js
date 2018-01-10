@@ -5,6 +5,10 @@ $(document).ready(function() {
     event.preventDefault();
 
     const dob = $('#dob').val();
+    const userGender = $('.gender').val();
+    const userSmoker = $('.smoker').val();
+    const userRunner = $('.runner').val();
+    const userLefty = $('.lefty').val();
     const userAge = new Age(dob);
 
     let userAgeSeconds = userAge.ageInSeconds();
@@ -25,7 +29,7 @@ $(document).ready(function() {
 
     $('#age-form').slideUp();
     $('.resluts').slideDown();
-    
+
     $('#todaysDate').text(moment());
     $('#enteredDOB').text(dob);
     $('#ageInSeconds').text(userAgeSeconds);
