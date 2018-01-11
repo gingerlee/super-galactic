@@ -9,7 +9,6 @@
 **JavaScript Week 1:** A javascript application that takes a user's age and calculates their corresponding age on different planets in the galaxy.
 
 ## Installation
-To view this repository copy this [link](https://gingerlee.github.io/super-galactic/) into the browser of your choice.
 
 1. _`$ git clone` [https://github.com/gingerlee/super-galactic.git](https://github.com/gingerlee/super-galactic.git)_
 

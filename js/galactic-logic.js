@@ -1,8 +1,12 @@
 
  // User Age Calcualtion
 export class Age {
-  constructor(dob) {
+  constructor(dob, gender, smoker, runner, lefty) {
     this.dob = dob;
+    this.gender = gender;
+    this.smoker = smoker;
+    this.runner = runner;
+    this.lefty = lefty;
   }
 
   ageInYears() {
@@ -60,60 +64,60 @@ export class Age {
     return averageLife;
   }
 
-  lifeExpectancyMercury(gender, smoker, runner, lefty) {
-    let earthLife = this.lifeExpectancyEarth(gender, smoker, runner, lefty);
+  lifeExpectancyMercury() {
+    let earthLife = this.lifeExpectancyEarth();
     let mercuryLife = Math.round(earthLife / 0.24);
     return mercuryLife;
   }
 
-  lifeExpectancyVenus(gender, smoker, runner, lefty) {
-    let earthLife = this.lifeExpectancyEarth(gender, smoker, runner, lefty);
+  lifeExpectancyVenus() {
+    let earthLife = this.lifeExpectancyEarth();
     let venusLife = Math.round(earthLife / 0.62);
     return venusLife;
   }
 
-  lifeExpectancyMars(gender, smoker, runner, lefty) {
-    let earthLife = this.lifeExpectancyEarth(gender, smoker, runner, lefty);
+  lifeExpectancyMars() {
+    let earthLife = this.lifeExpectancyEarth();
     let marsLife = Math.round(earthLife / 1.88);
     return marsLife;
   }
 
-  lifeExpectancyJupiter(gender, smoker, runner, lefty) {
-    let earthLife = this.lifeExpectancyEarth(gender, smoker, runner, lefty);
+  lifeExpectancyJupiter() {
+    let earthLife = this.lifeExpectancyEarth();
     let jupiterLife = Math.round(earthLife / 11.86);
     return jupiterLife;
   }
 
-  earthYearsLeft(gender, smoker, runner, lefty) {
-    let earthLife = this.lifeExpectancyEarth(gender, smoker, runner, lefty);
+  earthYearsLeft() {
+    let earthLife = this.lifeExpectancyEarth();
     let age = this.ageInYears();
     let yearsLeft = earthLife - age;
     return yearsLeft;
   }
 
-  mercuryYearsLeft(gender, smoker, runner, lefty) {
-    let mercuryLife = this.lifeExpectancyMercury(gender, smoker, runner, lefty);
+  mercuryYearsLeft() {
+    let mercuryLife = this.lifeExpectancyMercury();
     let age = this.ageInYears();
     let yearsLeft = mercuryLife - age;
     return yearsLeft;
   }
 
-  venusYearsLeft(gender, smoker, runner, lefty) {
-    let venusLife = this.lifeExpectancyVenus(gender, smoker, runner, lefty);
+  venusYearsLeft() {
+    let venusLife = this.lifeExpectancyVenus();
     let age = this.ageInYears();
     let yearsLeft = venusLife - age;
     return yearsLeft;
   }
 
-  marsYearsLeft(gender, smoker, runner, lefty) {
-    let marsLife = this.lifeExpectancyMars(gender, smoker, runner, lefty);
+  marsYearsLeft() {
+    let marsLife = this.lifeExpectancyMars();
     let age = this.ageInYears();
     let yearsLeft = marsLife - age;
     return yearsLeft;
   }
 
-  jupiterYearsLeft(gender, smoker, runner, lefty) {
-    let jupiterLife = this.lifeExpectancyJupiter(gender, smoker, runner, lefty);
+  jupiterYearsLeft() {
+    let jupiterLife = this.lifeExpectancyJupiter();
     let age = this.ageInYears();
     let yearsLeft = jupiterLife - age;
     return yearsLeft;

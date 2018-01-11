@@ -4,7 +4,7 @@
 module.exports = function(config) {
   config.set({
     basePath: '',
-    frameworks: ['jquery-3.2.1', 'jasmine', 'browserify'],
+    frameworks: ['jquery-3.2.1', 'jasmine', 'browserify', 'moment-2.9.0'],
     files: [
       'js/*.js',
       'spec/*-spec.js',
@@ -20,12 +20,13 @@ module.exports = function(config) {
       'karma-browserify',
       'karma-jasmine',
       'karma-chrome-launcher',
-      'karma-jasmine-html-reporter'
+      'karma-jasmine-html-reporter',
+      'karma-moment'
     ],
 
     browserify: {
       debug: true,
-      transform: [ [ 'babelify', {presets: ["env"]} ] ]
+      transform: [ [ 'babelify', {presets: ["es2015"]} ] ]
     },
 
     reporters: ['progress', 'kjhtml'],
