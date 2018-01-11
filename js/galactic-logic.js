@@ -10,33 +10,33 @@ export class Age {
   }
 
   ageInYears() {
-    let dob = this.dob;
-    let ageInYears = moment().diff(dob, 'years');
+    const dob = this.dob;
+    const ageInYears = moment().diff(dob, 'years');
     return ageInYears;
   }
 
   ageInSeconds(){
-    let ageInSeconds = this.ageInYears() * 31536000;
+    const ageInSeconds = this.ageInYears() * 31536000;
     return ageInSeconds;
   }
 
   mercury(){
-    let mercuryAge = Math.round(this.ageInYears() * 0.24);
+    const mercuryAge = Math.round(this.ageInYears() * 0.24);
     return mercuryAge;
   }
 
   venus(){
-    let venusAge = Math.round(this.ageInYears() * 0.62);
+    const venusAge = Math.round(this.ageInYears() * 0.62);
     return venusAge;
   }
 
   mars() {
-    let marsAge = Math.round(this.ageInYears() * 1.88);
+    const marsAge = Math.round(this.ageInYears() * 1.88);
     return marsAge;
   }
 
   jupiter() {
-    let jupiterAge = Math.round(this.ageInYears() * 11.86);
+    const jupiterAge = Math.round(this.ageInYears() * 11.86);
     return jupiterAge;
   }
 
@@ -65,61 +65,61 @@ export class Age {
   }
 
   lifeExpectancyMercury() {
-    let earthLife = this.lifeExpectancyEarth();
-    let mercuryLife = Math.round(earthLife / 0.24);
+    const earthLife = this.lifeExpectancyEarth();
+    const mercuryLife = Math.round(earthLife / 0.24);
     return mercuryLife;
   }
 
   lifeExpectancyVenus() {
-    let earthLife = this.lifeExpectancyEarth();
-    let venusLife = Math.round(earthLife / 0.62);
+    const earthLife = this.lifeExpectancyEarth();
+    const venusLife = Math.round(earthLife / 0.62);
     return venusLife;
   }
 
   lifeExpectancyMars() {
-    let earthLife = this.lifeExpectancyEarth();
-    let marsLife = Math.round(earthLife / 1.88);
+    const earthLife = this.lifeExpectancyEarth();
+    const marsLife = Math.round(earthLife / 1.88);
     return marsLife;
   }
 
   lifeExpectancyJupiter() {
-    let earthLife = this.lifeExpectancyEarth();
-    let jupiterLife = Math.round(earthLife / 11.86);
+    const earthLife = this.lifeExpectancyEarth();
+    const jupiterLife = Math.round(earthLife / 11.86);
     return jupiterLife;
   }
 
   earthYearsLeft() {
-    let earthLife = this.lifeExpectancyEarth();
-    let age = this.ageInYears();
-    let yearsLeft = earthLife - age;
+    const earthLife = this.lifeExpectancyEarth();
+    const age = this.ageInYears();
+    const yearsLeft = earthLife - age;
     return yearsLeft;
   }
 
   mercuryYearsLeft() {
-    let mercuryLife = this.lifeExpectancyMercury();
-    let age = this.ageInYears();
-    let yearsLeft = mercuryLife - age;
+    const mercuryLife = this.lifeExpectancyMercury();
+    const age = this.ageInYears();
+    const yearsLeft = mercuryLife - age;
     return yearsLeft;
   }
 
   venusYearsLeft() {
-    let venusLife = this.lifeExpectancyVenus();
-    let age = this.ageInYears();
-    let yearsLeft = venusLife - age;
+    const venusLife = this.lifeExpectancyVenus();
+    const age = this.ageInYears();
+    const yearsLeft = venusLife - age;
     return yearsLeft;
   }
 
   marsYearsLeft() {
-    let marsLife = this.lifeExpectancyMars();
-    let age = this.ageInYears();
-    let yearsLeft = marsLife - age;
+    const marsLife = this.lifeExpectancyMars();
+    const age = this.ageInYears();
+    const yearsLeft = marsLife - age;
     return yearsLeft;
   }
 
   jupiterYearsLeft() {
-    let jupiterLife = this.lifeExpectancyJupiter();
-    let age = this.ageInYears();
-    let yearsLeft = jupiterLife - age;
+    const jupiterLife = this.lifeExpectancyJupiter();
+    const age = this.ageInYears();
+    const yearsLeft = jupiterLife - age;
     return yearsLeft;
   }
 }
